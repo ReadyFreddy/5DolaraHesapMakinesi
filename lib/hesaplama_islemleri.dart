@@ -59,6 +59,18 @@ String calculateValues(String valuesToCalc) {
       }
     }
   }
+  
+  if(allNumericValuesAndOps.length == 1)
+  {
+    if (allNumericValuesAndOps.length == 1) {
+      if (isInteger(num.parse(allNumericValuesAndOps[0]))) {
+        int intValue =
+            int.parse(allNumericValuesAndOps[0].replaceAll(".0", ""));
+        return intValue.toString();
+      }
+      return allNumericValuesAndOps[0];
+    }
+  }
 
   for (int i = 0; i < allNumericValuesAndOps.length; i = i + 2) {
     Decimal firstValue =
